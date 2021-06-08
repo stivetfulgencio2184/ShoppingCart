@@ -4,9 +4,13 @@ import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.ForeignKey;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.Data;
@@ -21,10 +25,11 @@ public class Sale {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
-	private Integer id;
+	private Integer id;	
 	
-	@Column(name = "id_client", nullable = false)
-	private Integer id_client;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "id_client", referencedColumnName = "id", nullable = false, foreignKey = @ForeignKey(name = "FK_Client_Sale"))
+	private Client client;
 	
 	@Column(name = "date", nullable = false)
 	private Date date;
