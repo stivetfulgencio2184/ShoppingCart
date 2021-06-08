@@ -18,11 +18,15 @@ public class SaleDetail {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false)
 	private Integer id;
 	
-	@Column(name = "id_sale")
+	@Column(name = "id_sale", nullable = false)
 	private Integer id_sale;
 	
-	@Column(name = "id_product")
+	@Column(name = "id_product", nullable = false)
 	private Integer product;
+	
+	@Column(name = "quantity", nullable = false)
+	private Integer quantity;
 }

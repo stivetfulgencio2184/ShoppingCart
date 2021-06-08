@@ -20,11 +20,12 @@ public class Sale {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false)
 	private Integer id;
 	
-	@Column(name = "id_client")
+	@Column(name = "id_client", nullable = false)
 	private Integer id_client;
 	
-	@Column(name = "date")
+	@Column(name = "date", nullable = false)
 	private Date date;
 }

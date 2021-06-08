@@ -18,15 +18,16 @@ public class Client {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id", nullable = false)
 	private Integer id;
 	
-	@Column(name = "names")
+	@Column(name = "names", nullable = false)
 	private String names;
 	
-	@Column(name = "surnames")
+	@Column(name = "surnames", nullable = false)
 	private String surnames;
 	
-	@Column(name = "dni")
+	@Column(name = "dni", nullable = false)
 	private String dni;
 	
 	@Column(name = "phone")
