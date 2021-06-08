@@ -1,4 +1,6 @@
-package net.java.sprintboot.model;
+package net.java.sprintboot.model.entity;
+
+import java.math.BigDecimal;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,28 +13,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "Client")
+@Table(name = "Product")
 @Data
 @NoArgsConstructor
-public class Client {
+public class Product {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id", nullable = false)
 	private Integer id;
 	
-	@Column(name = "names", nullable = false)
-	private String names;
+	@Column(name = "name", nullable = false)
+	private String name;
 	
-	@Column(name = "surnames", nullable = false)
-	private String surnames;
-	
-	@Column(name = "dni", nullable = false)
-	private String dni;
-	
-	@Column(name = "phone")
-	private String phone;
-	
-	@Column(name = "email")
-	private String email;
+	@Column(name = "price", nullable = false)
+	private BigDecimal price; 
 }

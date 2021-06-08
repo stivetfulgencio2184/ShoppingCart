@@ -1,4 +1,4 @@
-package net.java.sprintboot.model;
+package net.java.sprintboot.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

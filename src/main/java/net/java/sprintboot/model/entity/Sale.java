@@ -1,4 +1,4 @@
-package net.java.sprintboot.model;
+package net.java.sprintboot.model.entity;
 
 import java.sql.Date;
 
