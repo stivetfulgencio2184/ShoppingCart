@@ -1,7 +1,5 @@
 package net.java.sprintboot.model;
 
-import java.sql.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,15 +14,15 @@ import lombok.NoArgsConstructor;
 @Table(name = "Sale")
 @Data
 @NoArgsConstructor
-public class Sale {
+public class SaleDetail {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	
-	@Column(name = "id_client")
-	private Integer id_client;
+	@Column(name = "id_sale")
+	private Integer id_sale;
 	
-	@Column(name = "date")
-	private Date date;
+	@Column(name = "id_product")
+	private Integer product;
 }
